@@ -1,0 +1,26 @@
+<div class="container">
+  <div
+    [@toLoginPage]="hasLaunched ? 'rawPage': 'filledPage'"
+    (@toLoginPage.done)="onAnimationDone($event)"
+    class="container-2nd">
+  </div>
+  <div #titulos class="titles animate__animated">
+    <div class="title-1">
+      monitore sua rede,
+      <br />
+      <br />
+      <span>
+        <span class="logo">
+          <img src="../../../assets/image/logo-1.png">
+        </span>
+        fique conectado
+      </span>
+    </div>
+      <button 
+      mat-stroked-button
+      (click)="launch()"
+      class="enter-button">
+      começar
+    </button>
+  </div>
+</div>
