@@ -11,6 +11,7 @@ import { NGXChartsModule } from './module/ngx-charts.module';
 import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
 import { MainModule } from './view/main/main.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,12 @@ import { MainModule } from './view/main/main.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MainModule,
     MaterialModule,
-    NGXChartsModule
+    NGXChartsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
