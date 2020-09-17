@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './module/material.module';
 import { NGXChartsModule } from './module/ngx-charts.module';
-import { HomeComponent } from './view/homepage/home.component';
+import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
 
 @NgModule({
