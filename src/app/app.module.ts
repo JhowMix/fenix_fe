@@ -11,6 +11,7 @@ import { NGXChartsModule } from './module/ngx-charts.module';
 
 import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
+import { DashboardComponent } from './view/main/dashboard/dashboard.component';
 import { MainComponent } from './view/main/main.component';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MainComponent } from './view/main/main.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

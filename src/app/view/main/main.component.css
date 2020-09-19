@@ -45,3 +45,11 @@
     width: 34px;
     height: 34px;
 }
+
+.content {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+}

@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-main',
@@ -20,11 +21,14 @@ import { Component } from '@angular/core';
         ])
     ]
   })
-  export class MainComponent {
+export class MainComponent {
   
-    constructor() { }
+    constructor(
+        private router: Router
+    ) { }
   
     ngOnInit(): void {
+        this.router.navigate([{ outlets: { sidebar: ['']}}], {});
     }
   
   }
