@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { MaterialModule } from './module/material.module';
@@ -10,24 +11,22 @@ import { NGXChartsModule } from './module/ngx-charts.module';
 
 import { HomeComponent } from './view/home/home.component';
 import { LoginComponent } from './view/login/login.component';
-import { MainModule } from './view/main/main.module';
-import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './view/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MainModule,
     MaterialModule,
-    NGXChartsModule,
-  
+    NGXChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
