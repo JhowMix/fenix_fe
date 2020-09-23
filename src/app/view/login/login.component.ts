@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
   login(): void {
     // TODO: Algoritmo de autenticação para entrada no sistema
 
-    this.router.navigate(['/v1', {}]);
+    this.router.navigate(['/v1']);
   }
 }
