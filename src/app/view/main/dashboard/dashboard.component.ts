@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { single } from './data';
 
-import { Device } from '../../../model/device';
 import { DeviceService } from 'src/app/service/device.service';
+import { PieData } from 'src/app/model/chart/pie';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +9,7 @@ import { DeviceService } from 'src/app/service/device.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  devices: Device[];
+  devices: PieData[] = [];
   single: any[];
   view: any[] = [700, 400];
 
@@ -21,23 +20,32 @@ export class DashboardComponent implements OnInit {
   isDoughnut: boolean = false;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#0b00a8', '#00a82d', '#84a800', '#a80000']
   };
 
   constructor(
     private deviceService: DeviceService
   ) {
-    Object.assign(this, { single });
   }
 
   ngOnInit() {
-    this.deviceService.getAll().subscribe(
-      res => this.devices = res
-    );
+    this.deviceService.getAll().subscribe(res => {
+        res.forEach(el => {
+          this.devices.push({
+            name: el.name,
+            value: el.throughputAverage
+          });
+        });
+    },
+    err => console.error(err),
+    () => this.devices = [...this.devices]);
   }
 
   onSelect(data): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
 
+  throughputFormat(data) {
+    return data + " Kbps"
+  }
 }

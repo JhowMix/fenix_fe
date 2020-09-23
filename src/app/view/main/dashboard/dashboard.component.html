@@ -1,13 +1,12 @@
-<mat-card class="card-chart">
-    <div class="graphics">
-        <ngx-charts-advanced-pie-chart
-            class="graphic-1"
-            [view]="view"
-            [scheme]="colorScheme"
-            [results]="single"
-            [gradient]="gradient"
-            (select)="onSelect($event)"
-            minWidth="400">
-      </ngx-charts-advanced-pie-chart>
-    </div>
+<mat-card class="card-chart col-sm-7 animate__animated animate__fadeIn">
+  <ngx-charts-advanced-pie-chart
+    [view]="view" 
+    [scheme]="colorScheme" 
+    [results]="devices" 
+    [gradient]="gradient"
+    [valueFormatting]="throughputFormat"
+    (select)="onSelect($event)" 
+    minWidth="400" 
+    label="Taxa de Tranferência">
+  </ngx-charts-advanced-pie-chart>
 </mat-card>
