@@ -1,5 +1,5 @@
 import { Network } from "./network";
 
-export class Route  {
+export interface Route  {
     destination: Network[];
 }

@@ -1,4 +1,4 @@
-export class Address {
+export interface Address {
     ipv4?: string;
     mask4?: string;
     ipv6?: string;

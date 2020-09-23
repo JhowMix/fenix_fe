@@ -1,6 +1,6 @@
 import { Address } from './address';
 
-export class Port {
+export interface Port {
     name?: string;
     phyAddress?: string;
     throughput?: number;

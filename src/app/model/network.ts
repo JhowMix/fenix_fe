@@ -1,6 +1,6 @@
 import { Address } from "cluster";
 
-export class Network {
+export interface Network {
     nextHop?: string;
     address?: Address;
 }
