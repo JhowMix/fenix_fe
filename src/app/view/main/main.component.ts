@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
         trigger('sidebar', [
             transition(':enter', [
                 style({left: '-5%'}),
-                animate('400ms 700ms ease', style({ left: '0%'}))
+                animate('300ms 500ms ease', style({ left: '0%'}))
             ])
         ]),
         trigger('background', [
@@ -28,7 +28,6 @@ export class MainComponent {
     ) { }
   
     ngOnInit(): void {
-        this.router.navigate([{ outlets: { sidebar: ['']}}], {});
     }
   
   }
