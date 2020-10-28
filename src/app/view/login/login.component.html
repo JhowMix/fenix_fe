@@ -1,29 +1,38 @@
 <div class="container-00"></div>
 <div class="login-box animate__animated animate__fadeIn animate__faster">
-    <div class="logo">
-        <img src="../../../assets/image/logo-1.png" alt="">
-    </div>
+  <div class="logo">
+    <img src="../../../assets/image/logo-1.png" alt="">
+  </div>
+  <form [formGroup]="loginForm" (submit)="login()">
     <div class="login-form">
-        <mat-form-field>
-            <mat-label>Usuário</mat-label>
-            <input matInput>
-        </mat-form-field>
+      <mat-form-field>
+        <mat-label>Usuário</mat-label>
+        <input
+          formControlName="username"
+          [autocomplete]="'off'"
+          matInput>
+      </mat-form-field>
 
-        <mat-form-field>
-            <mat-label>Senha</mat-label>
-            <input matInput type="password">
-        </mat-form-field>
-    
-        <div class="terms-use">
-            <mat-checkbox>
-                Eu aceito os <a>Termos de Uso</a>
-            </mat-checkbox>
-        </div>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          matInput>
+      </mat-form-field>
 
-        <button mat-raised-button 
-            class="login-button"
-            (click)="login()">
-            Entrar
-        </button>
+      <div class="terms-use">
+        <mat-checkbox>
+          Eu aceito os <a>Termos de Uso</a>
+        </mat-checkbox>
+      </div>
+
+      <button mat-raised-button
+              type="submit"
+              class="login-button"
+              (click)="login()">
+        Entrar
+      </button>
     </div>
+  </form>
 </div>
