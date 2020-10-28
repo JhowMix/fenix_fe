@@ -1,18 +1,12 @@
-import { animate, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {animate, style, transition, trigger} from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
     selector: 'app-main',
     templateUrl: './main.component.html',
-    styleUrls: ['./main.component.css'],
+    styleUrls: ['./main.component.scss'],
     animations: [
-        trigger('sidebar', [
-            transition(':enter', [
-                style({left: '-5%'}),
-                animate('300ms 500ms ease', style({ left: '0%'}))
-            ])
-        ]),
         trigger('background', [
             transition(':enter', [
                 style({opacity: 0.2}),
@@ -21,14 +15,26 @@ import { Router } from '@angular/router';
         ])
     ]
   })
-export class MainComponent {
-  
+export class MainComponent implements OnInit {
+    options: any[] = [
+        { icon: 'dashboard', url: ''},
+        { icon: 'storage', url: 'device-list'},
+        { icon: 'settings_applications', url: 'device-data'}
+    ];
+
     constructor(
         private router: Router
     ) { }
-  
+
     ngOnInit(): void {
     }
-  
+
+    forward(url: string): void {
+      let commands = url.trim().length > 0 ? ['v1', url] : ['v1'];
+
+      this.router.navigate(commands)
+        .catch(err => {
+          console.error(err);
+        });
+    }
   }
-  

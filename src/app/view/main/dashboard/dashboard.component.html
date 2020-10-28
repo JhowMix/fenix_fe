@@ -1,12 +1,17 @@
-<mat-card class="card-chart col-sm-7 animate__animated animate__fadeIn">
-  <ngx-charts-advanced-pie-chart
-    [view]="view" 
-    [scheme]="colorScheme" 
-    [results]="devices" 
-    [gradient]="gradient"
-    [valueFormatting]="throughputFormat"
-    (select)="onSelect($event)" 
-    minWidth="400" 
-    label="Taxa de Tranferência">
-  </ngx-charts-advanced-pie-chart>
-</mat-card>
+<mat-grid-list
+  cols="2"
+  rowHeight="2:1"
+  class="animate__animated animate__fadeIn">
+  <mat-grid-tile>
+    <ngx-charts-pie-grid
+      [animations]="false"
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="devices"
+      label="Taxa">
+    </ngx-charts-pie-grid>
+  </mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>

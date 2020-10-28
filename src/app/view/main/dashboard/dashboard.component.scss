@@ -1,0 +1,15 @@
+.card-chart {
+  height: 50%;
+  animation-duration: 2s;
+}
+
+:host ::ng-deep .ngx-charts {
+  text {
+    fill: #fff !important;
+  }
+}
+
+mat-grid-tile {
+  animation-duration: 2s;
+  background: rgba($color: #828282, $alpha: 0.5);
+}

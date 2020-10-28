@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   animations: [
     trigger('toLoginPage', [
       state('filledPage', style({
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+
   }
 
   launch(): void {

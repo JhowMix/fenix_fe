@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list'
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 
@@ -15,7 +16,8 @@ import { MatListModule } from '@angular/material/list';
         MatCheckboxModule,
         MatFormFieldModule,
         MatInputModule,
-        MatListModule
+        MatListModule,
+        MatGridListModule
     ],
     exports: [
         MatButtonModule,
@@ -23,7 +25,8 @@ import { MatListModule } from '@angular/material/list';
         MatCheckboxModule,
         MatFormFieldModule,
         MatInputModule,
-        MatListModule
+        MatListModule,
+        MatGridListModule
     ]
   })
   

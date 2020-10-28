@@ -1,11 +1,12 @@
 export interface Device {
-    id?: string;
+    engineId?: string;
     name?: string;
     deviceFamily?: string;
     osVersion?: string;
     platform?: string;
     upTime?: number;
-    throughputAverage?: number,
+    status?: string;
+    throughputAverage?: number;
     lastChecking?: Date;
     temperature?: any[];
 }
