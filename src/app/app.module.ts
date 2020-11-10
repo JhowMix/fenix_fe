@@ -14,7 +14,7 @@ import {LoginComponent} from './view/login/login.component';
 import {DashboardComponent} from './view/main/dashboard/dashboard.component';
 import {MainComponent} from './view/main/main.component';
 import {DeviceListComponent} from './view/main/device-list/device-list.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BarChartDeviceComponent } from './shared/bar-chart-device/bar-chart-device.component';
 import { DeviceDataComponent } from './view/main/device-data/device-data.component';
 
@@ -29,15 +29,16 @@ import { DeviceDataComponent } from './view/main/device-data/device-data.compone
     BarChartDeviceComponent,
     DeviceDataComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    NGXChartsModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        NGXChartsModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]

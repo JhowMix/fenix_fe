@@ -19,7 +19,7 @@ export class MainComponent implements OnInit {
     options: any[] = [
         { icon: 'dashboard', url: ''},
         { icon: 'storage', url: 'device-list'},
-        { icon: 'settings_applications', url: 'device-data'}
+        { icon: 'control_point_duplicate', url: 'device-data'}
     ];
 
     constructor(

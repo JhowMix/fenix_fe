@@ -1,0 +1,80 @@
+<mat-card *ngIf="!hasDeviceFound"
+          style="text-align: center"
+          class="search-card animate__animated animate__fadeIn">
+  <mat-card-content>
+    <mat-form-field  style="align-text: center">
+      <input
+        [(ngModel)]="target"
+        placeholder="Dispositivo"
+        matInput>
+    </mat-form-field>
+    <button *ngIf="!isFetching"
+            (click)="fetch()"
+            type="submit"
+            mat-raised-button>
+      Buscar
+    </button>
+    <mat-progress-spinner *ngIf="isFetching"
+                          [diameter]="23"
+                          class="loading-spinner"
+                          mode="indeterminate">
+    </mat-progress-spinner>
+    <small *ngIf="isFetching">
+      {{progressText}}
+    </small>
+  </mat-card-content>
+</mat-card>
+
+<mat-grid-list
+  *ngIf="hasDeviceFound"
+  cols="2"
+  rowHeight="2:1"
+  class="animate__animated animate__fadeIn">
+  <mat-grid-tile [rowspan]="2" style="color: white">
+    <div class="container">
+      <div class="row">
+      <mat-card class="title">
+        <mat-card-title>
+          Dispositivo
+        </mat-card-title>
+      </mat-card>
+      </div>
+      <div class="row">
+        <table>
+          <tr>
+            <td><b>Nome</b></td>
+            <td>{{device.name}}</td>
+          </tr>
+          <tr>
+            <td><b>Plataforma</b></td>
+            <td>{{device.platform}}</td>
+          </tr>
+          <tr>
+            <td><b>Versão SO</b></td>
+            <td>{{device.osVersion}}</td>
+          </tr>
+          <tr>
+            <td><b>última Verificação:</b></td>
+            <td>{{device.lastChecking | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
+          </tr>
+          <tr>
+            <td><b>Média Transmissão:</b></td>
+            <td>{{device.throughputAverage}} Kbps</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top"><b>Portas:</b></td>
+            <td>
+              <div *ngFor="let port of device.ports"  class="ports-box">
+              {{port.name}}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+
+  </mat-grid-tile>
+  <mat-grid-tile>A</mat-grid-tile>
+</mat-grid-list>

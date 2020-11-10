@@ -1,3 +1,5 @@
+import {Port} from './port';
+
 export interface Device {
     engineId?: string;
     name?: string;
@@ -9,4 +11,5 @@ export interface Device {
     throughputAverage?: number;
     lastChecking?: Date;
     temperature?: any[];
+    ports: Port[];
 }

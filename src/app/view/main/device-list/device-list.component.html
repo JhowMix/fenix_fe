@@ -3,8 +3,7 @@
   rowHeight="2:1"
   class="animate__animated animate__fadeIn">
   <mat-grid-tile [rowspan]="2">
-    <mat-selection-list #shoes
-                        [multiple]="false"
+    <mat-selection-list [multiple]="false"
                         style="width: 100%; height: 100%"
                         (selectionChange)="onDeviceSelected($event)">
       <mat-list-option *ngFor="let device of devices" [value]="device">
@@ -13,8 +12,7 @@
            <td>
              <span
                class="material-icons"
-               [ngStyle]="{'color': device.status === 'On' ? '#00de3b' : 'red' }"
-             >
+               [ngStyle]="{'color': device.status === 'On' ? '#00de3b' : 'red' }">
               trip_origin
              </span>
            </td>
