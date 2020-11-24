@@ -13,7 +13,7 @@ import {Observable, Subscription, timer} from 'rxjs';
 export class DashboardComponent implements OnInit, OnDestroy {
   private timerSubscription: Subscription;
   devices: ChartGeneralData[] = [];
-  view: any[] = [500, 300];
+  view: any[] = [400, 500];
 
   // options
   showLegend = true;

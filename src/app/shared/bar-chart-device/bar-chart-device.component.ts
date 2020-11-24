@@ -7,7 +7,7 @@ import {ChartGeneralData} from '../../model/chart/chart-general-data';
   styleUrls: ['./bar-chart-device.component.scss']
 })
 export class BarChartDeviceComponent implements OnInit {
-  view: any[] = [660, 300];
+  view: any[] = [450, 300];
 
   showXAxis = true;
   showYAxis = true;

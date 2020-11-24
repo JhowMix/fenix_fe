@@ -13,3 +13,9 @@ mat-grid-tile {
   animation-duration: 2s;
   background: rgba($color: #828282, $alpha: 0.5);
 }
+
+ngx-charts-pie-grid {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
